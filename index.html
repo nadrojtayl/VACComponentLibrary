@@ -72,41 +72,6 @@
           }
     </td>
     </tr>
-     <tr>
-      <th>options</th>
-      <td> Array</td>
-      <td> Yes</td>
-      <td>An array that defines how many different buttons will appear on top of the panel. Each one will display different content.</td>
-      <td>["MenuA","MenuB","MenuC"]</td>
-    </tr>
-    <tr>
-      <th>Panel1 (Or Panel2...Panel3...Panel4...)</th>
-      <td> JSX</td>
-      <td> Yes</td>
-      <td>JSX for the content that should appear in each panel</td>
-      <td> panel0 = {
-            (
-            <View>
-              <TitleText>PANEL 1 CONTENT</TitleText>
-            </View>
-            )
-          }
-    </td>
-    </tr>
-    <tr>
-      <th>ButtonStyle</th>
-      <td> StyleObject</td>
-      <td> No</td>
-      <td>Sets the style for the menu buttons at the top of the panel</td>
-      <td> panel0 = {
-            (
-            <View>
-              <TitleText>PANEL 1 CONTENT</TitleText>
-            </View>
-            )
-          }
-    </td>
-    </tr>
   </tbody>
 </table>
 
@@ -150,48 +115,51 @@
       <th>DropdownStyle</th>
       <td> StyleObject</td>
       <td> No</td>
-      <td>Sets the style for the dropdown at</td>
-      <td> panel0 = {
-            (
-            <View>
-              <TitleText>PANEL 1 CONTENT</TitleText>
-            </View>
-            )
-          }
+      <td>Sets the style for the dropdown</td>
+      <td> {width:"100%"}
     </td>
     </tr>
-     <tr>
-      <th>options</th>
-      <td> Array</td>
+     
+  </tbody>
+</table>
+
+
+
+<h2 id="DropdownContent">CollectInfo</h2>
+  <br>
+  <p>CollectInfo is a component that creates a button which raises a popup to send information to a remote server and database. The schema for the server is determined programatically</p>
+  <table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="Prop Name">Prop Name</abbr></th>
+      <th>Type</th>
+      <th>Required</th>
+      <th><abbr title="Description">Description</abbr></th>
+      <th><abbr title="Description">Example</abbr></th>
+    </tr>
+  </thead>
+  <tbody>
+       <tr id = "panel">
+      <th>url</th>
+      <td>String</td>
       <td> Yes</td>
-      <td>An array that defines how many different buttons will appear on top of the panel. Each one will display different content.</td>
-      <td>["MenuA","MenuB","MenuC"]</td>
+      <td>A url to your heroku database setup from VAC</td>
+      <td>"http://www.my_server.com/table"</td>
     </tr>
     <tr>
-      <th>Panel1 (Or Panel2...Panel3...Panel4...)</th>
-      <td> JSX</td>
+      <th>ContainerStyle</th>
+      <td> StyleObject</td>
       <td> Yes</td>
-      <td>JSX for the content that should appear in each panel</td>
-      <td> panel0 = {
-            (
-            <View>
-              <TitleText>PANEL 1 CONTENT</TitleText>
-            </View>
-            )
-          }
+      <td>Styling for the popup container that gets information</td>
+      <td> {width:"100%",alignItems:"center"}
     </td>
     </tr>
     <tr>
       <th>ButtonStyle</th>
       <td> StyleObject</td>
       <td> No</td>
-      <td>Sets the style for the menu buttons at the top of the panel</td>
-      <td> panel0 = {
-            (
-            <View>
-              <TitleText>PANEL 1 CONTENT</TitleText>
-            </View>
-            )
+      <td>Sets the style for the dropdown at</td>
+      <td>{width:"100%",alignItems:"center"}
           }
     </td>
     </tr>

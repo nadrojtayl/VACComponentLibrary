@@ -99,12 +99,11 @@ class CollectInfo extends Component {
     var that = this;
     console.log(that.state.hidden)
     if(that.state.hidden){
-      console.log("HIDDEN")
-      return (<View style = {{width:"10%"}}><Button onPress = {function(){that.setState({hidden:false})}} title = {that.props.title}></Button></View>)
+      return (<View style = {that.props.ButtonStyle === undefined ? ({width:"10%"}):(that.props.ButtonStyle)}><Button onPress = {function(){that.setState({hidden:false})}} title = {that.props.title}></Button></View>)
     }
     return (
 
-      <View style={{position:"absolute", justifyContent:'center',  borderWidth:1, height:"50%",width:"50%",top:"20%",left:"10%", backgroundColor:'white'}}>
+      <View style= {that.props.ContainerStyle === undefined ? ({position:"absolute", justifyContent:'center',  borderWidth:1, height:"50%",width:"50%",top:"20%",left:"10%", backgroundColor:'white'}):(that.props.ContainerStyle)}>
         <ScrollView>
         {that.state.fields.map(function(field,ind){
           return (<TextInput
