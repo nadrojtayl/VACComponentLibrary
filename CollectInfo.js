@@ -81,14 +81,14 @@ class CollectInfo extends Component {
     console.log(url)
     var body = JSON.stringify(this.state.fields);
     var that = this;
-     var schema = fetch(this.props.url, {
+       var schema = fetch(this.props.url, {
                 method: 'POST',
                 body:body,
                 headers: {
                   "Content-Type": "application/json",
                   "Accept": "application/json"
                 }
-      }).then(resp => resp.json()).then(function(res){
+      }).then(function(res){
         alert("Saved!")
          that.setState({"hidden":true})
       })
@@ -106,6 +106,11 @@ class CollectInfo extends Component {
       <View style= {that.props.ContainerStyle === undefined ? ({position:"absolute", justifyContent:'center',  borderWidth:1, height:"50%",width:"50%",top:"20%",left:"10%", backgroundColor:'white'}):(that.props.ContainerStyle)}>
         <ScrollView>
         {that.state.fields.map(function(field,ind){
+
+          if(field.column_name.indexOf("_id") !== -1){
+            return
+          }
+          
           return (<TextInput
           style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
           onChangeText={function(text){that.state.fields[ind].value = text}}
