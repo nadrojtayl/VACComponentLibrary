@@ -70,7 +70,7 @@ class DropdownContent extends Component{
        {
         <Picker
           selectedValue={that.props.options[that.state.selected_option_index]}
-          style={{ height: 50, width: 150 }}
+          style = {that.props.DropdownStyle === undefined ? ({ height: 50, width: 150 }):(that.props.ButtonStyle)}
           onValueChange = {function(val,ind){that.toggle.bind(that)(ind)}}
         >
         {that.props.options.map(function(option,ind){

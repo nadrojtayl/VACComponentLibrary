@@ -76,7 +76,7 @@ class Panels extends Component{
        {that.props.options.map(function(option,ind){
         return (
         <View style = {{height:"100%",width:"20%"}}>
-           <Button color = "rgb(10,132,255)" title = {option} onPress = {function(){that.toggle.bind(that)(ind)}}></Button>
+           <Button style = {that.props.ButtonStyle === undefined ? ({}):(that.props.ButtonStyle)} color = "rgb(10,132,255)" title = {option} onPress = {function(){that.toggle.bind(that)(ind)}}></Button>
         </View>
 
         )
